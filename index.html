@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>
+<script>
+	/*function A(age,name){
+		this.age=age;
+		this.name=name;
+	}
+	A.prototype.show=function(){
+		alert(this.name);
+		}
+
+	function B(age,name,job){
+		A.apply(this,arguments);
+		this.job=job;
+	}
+
+	var b=new A(14,'侠客行');
+	var a=new B(15,'朗行','下课');
+	alert(a.age);*/
+
+/*组合继承
+function SuperType(name){
+	this.name=name;
+	this.colors=["red","blue","green"];
+}
+
+SuperType.prototype.sayName=function(){
+	alert(this.name);
+}
+
+function SubType(name,age){
+
+	//继承属性
+	SuperType.call(this,name);
+	this.age=age;
+}
+
+//继承方法
+SubType.prototype=new SuperType();
+SubType.prototype.constructor=SubType;
+SubType.prototype.sayAge=function(){
+	alert(this.age);
+}
+
+var instancel1=new SubType('chris',24);
+instancel1.colors.push('black');
+alert(instancel1.colors);
+instancel1.sayName();
+instancel1.sayAge();
+
+var instancel2=new SubType('nike',28);
+console.log(instancel2.colors);
+instancel2.sayAge();
+instancel2.sayName();*/
+
+function creatFunction(){
+	
+    var result = new Array();
+
+    for(var i = 0;i<10;i++){
+        result[i] = function(){
+                return i;
+        };
+    }
+    return result;
+}
+console.log(creatFunction()[0]());
+
+	
+</script>
+</body>
+</html>
